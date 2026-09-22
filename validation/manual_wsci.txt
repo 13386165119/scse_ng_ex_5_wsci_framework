@@ -1,0 +1,9 @@
+Context characters: 2158
+The likely cause is that your Windows laptop still uses the old university password cached in your device. To resolve this, you can:
+
+1. **Forget the old password** in your Windows settings.
+2. **Reconnect using your new password**.
+
+The phone still works because it continues to use the same network credentials, and a temporary session with an existing signed-in account can continue.
+
+The phone can still work because it does not require a new password, and the temporary session with the old credentials is allowed.

@@ -1,0 +1,14 @@
+Selected files: wifi_setup.txt, password_changes.txt, service_status.txt
+Context characters: 2158
+Compressed context characters: 651
+Final context characters (including isolated state): 714
+{
+  "likely_cause": "The laptop is unable to connect to campus Wi-Fi because the university password was changed, and the Windows setup requires you to \"Forget\" the old password and reconfigure with the new one. However, if the connection still fails, check that your university account is active. If a device is still working but the Wi-Fi is unavailable, verify that the credentials are current. Cached passwords in email clients or VPN software may need to be updated. If an account is locked due to repeated attempts, check the service status.",
+  "steps": [
+    "1. Open the Windows settings and go to 'Network and Internet' > 'Internet settings' > 'Advanced security settings' > 'Forget the old password'.",
+    "2. Enter the new university password and confirm it.",
+    "3. If the connection still fails, check that your university account is active and that the credentials are current.",
+    "4. If the connection still fails, verify that the credentials are correct and that the device is not in a state of 'forbidden' or 'locked' (if applicable)."
+  ],
+  "explanation": "The issue is likely device-specific. The laptop is unable to connect to campus Wi-Fi because the university password was changed, and the Windows setup requires you to \"Forget\" the old password and reconfigure with the new one. If the connection still fails, check that your university account is active. If a device is still working but the Wi-Fi is unavailable, verify that the credentials are current. Cached passwords in email clients or VPN software may need to be updated. If an account is locked due to repeated attempts, check the service status."
+}

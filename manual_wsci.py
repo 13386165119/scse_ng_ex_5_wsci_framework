@@ -1,30 +1,17 @@
-from pathlib import Path
-from ollama import chat
+"""SELECT: manually choose files relevant to the example question."""
+from wsci_common import KNOWLEDGE_DIR, QUESTION, ask_qwen, read_context
 
 
-question = """
-I changed my university password this morning.
-Now my Windows laptop won't connect to campus Wi-Fi,
-but my phone still works.
-"""
-
-selected_files = [
-    ##Use only the files that are relevant to the question.
-
-]
-
-
-context = ""
-
-## Write a for loop to go through all the files in selected_files and read their contents into the context variable.
+def main():
+    selected_files = [KNOWLEDGE_DIR / name for name in (
+        "wifi_setup.txt", "password_changes.txt", "service_status.txt"
+    )]
+    context = read_context(selected_files)
+    response = ask_qwen("Give the likely cause, concrete steps from the documentation, "
+                        "and explain why the phone can still work. Keep the answer concise.", QUESTION, context)
+    print("Context characters:", len(context))
+    print(response.message.content)
 
 
-## Call Qwen with the student's question and the context you created above.
-
-
-
-print(
-    "Context characters:",
-    len(context)
-)
-print(response.message.content)
+if __name__ == "__main__":
+    main()

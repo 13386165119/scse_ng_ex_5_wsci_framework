@@ -1,0 +1,2 @@
+Context characters: 4180
+The phone can still work because it retains the current university credentials, allowing it to connect to campus Wi-Fi temporarily. The steps from the documentation include checking the network credentials and confirming that the university account is active. The password change does not invalidate the phone's connection, as it continues to use the existing credentials. The university service status indicates that the network is operational, so the phone's connectivity is likely due to the existing credentials rather than a device-specific issue.

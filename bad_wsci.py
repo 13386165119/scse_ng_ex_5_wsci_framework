@@ -1,30 +1,14 @@
-## This file is a bad way of managing context. 
-
-from pathlib import Path
-from ollama import chat
+"""Baseline: give Qwen every knowledge file, including irrelevant material."""
+from wsci_common import KNOWLEDGE_DIR, QUESTION, ask_qwen, read_context
 
 
-question = """
-I changed my university password this morning.
-Now my Windows laptop won't connect to campus Wi-Fi,
-but my phone still works.
-"""
+def main():
+    context = read_context(sorted(KNOWLEDGE_DIR.glob("*.txt")))
+    response = ask_qwen("Give the likely cause, concrete steps from the documentation, "
+                        "and explain why the phone can still work. Keep the answer concise.", QUESTION, context)
+    print("Context characters:", len(context))
+    print(response.message.content)
 
 
-context = ""
-
-for file in Path("knowledge").glob("*.txt"):
-    context += file.read_text()
-    context += "\n\n"
-
-## Make a call to Qwen with student's question and the context from the knowledge base.
-
-
-
-## Just for fun, print the total length of the context
-print(
-    "Context characters:",
-    len(context)
-)
-
-## Print the response from Qwen
+if __name__ == "__main__":
+    main()

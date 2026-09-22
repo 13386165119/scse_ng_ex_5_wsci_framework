@@ -1,0 +1,13 @@
+Selected files: wifi_setup.txt, password_changes.txt, service_status.txt
+Context characters: 2158
+Compressed context characters: 900
+Final context characters (including isolated state): 1539
+{
+  "likely_cause": "device-specific",
+  "steps": [
+    "Check if the device has cached old credentials.",
+    "Verify the service status and network connectivity.",
+    "Try resetting the device's Wi-Fi settings."
+  ],
+  "explanation": "The issue is likely device-specific. If the device still works after a password change, it may still be using cached credentials. Resetting the device's Wi-Fi settings could resolve the issue."
+}
